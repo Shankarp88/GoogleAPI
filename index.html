@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <!--Placeholder to add our own CSS styling later if needed-->
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -23,7 +24,11 @@
   <body>
     <div class="container">
       <h1 class="text-center">GoogleMaps API</h1>
-
+      <br>
+      <div id="click-button" class="text-center">
+      <button class="btn btn-primary m-1" onclick="placeholder()">Southeastern Capital Cities</button>
+      </div>
+      <br>
     </div>
 
     <div id="map"></div>
@@ -31,8 +36,8 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: 33.76, lng: -84.39},
+          zoom: 6.5
         });
       }
     </script>
