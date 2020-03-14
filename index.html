@@ -29,15 +29,22 @@
   <body>
     <div class="container">
       <h1 class="text-center">GoogleMaps API</h1>
+      <br>
+      <div id="click-button" class="text-center">
+      <button class="btn btn-primary m-1" onclick="placeholder()">Southeastern Capital Cities</button>
+      </div>
+      <br>
+
     </div>
 
     <div id="map"></div>
     <script>
       var map;
       function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 33.76, lng: -84.39},
+          zoom: 6.5
+
         });
         var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
         var mapOptions = {
