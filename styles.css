@@ -1,0 +1,25 @@
+/* Styling for Google API Application */
+
+/* the documentation says to add this styling. when it's removed, the map won't display. Not completely sure what it is doing
+** but leaving it included for now */
+
+/*html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }*/
+
+#map-container {
+    height: 90vh;
+    width: 100vw;
+    
+}
+
+ /* Always set the map height explicitly to define the size of the div
+  element that contains the map. */
+
+#map {
+    height: 100%;
+}
+
+
