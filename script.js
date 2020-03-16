@@ -13,6 +13,18 @@ var js_file = document.createElement('script');
     
 
 var map;
+var marker, i;     
+var capitals = [
+                ['Atlanta,GA', 33.76, -84.39],
+                ['Nashville,TN', 36.16, -86.78],
+                ['Tallahassee,FL', 30.45, -84.27],
+                ['Raleigh,NC', 35.77, -78.64],
+                ['Columbia,SC', 34.00, -81.03],
+                ['Montgomery,AL', 32.36, -86.28],
+                ['Jackson,MS', 32.32, -90.21],
+                ['Baton Rouge,LA', 30.46, -91.14]
+               ];
+    
 // changing 'function initMap to window.initMap = function apparently solved the rendering problem by moving the function
 // to the global scope so that when the api url makes the initMap callback (at the very end of url), it can be read. 
 // Was getting an "uncaught promise error: initMap is not a function" until this was changed
@@ -26,21 +38,21 @@ var myLatlng = new google.maps.LatLng(33.76, -84.39);
           
 var mapOptions = {
 zoom: 6.5,
-center: myLatlng
+center: myLatlng,
+mapTypeId: 'hybrid'
+   
 };
     
-var map = new google.maps.Map(
-document.getElementById("map"),
-mapOptions
-);
+var map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
-var marker = new google.maps.Marker({
-position: myLatlng,
-title: "Atlanta,GA 'Capital of the South'"
-});
+for (i=0; i< capitals.length; i++) {
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng(capitals[i][1], capitals[i][2]), map: map
+    });
     
-marker.setMap(map);
     
+    
+};
 }
 
 });
